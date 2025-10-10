@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    font-family: "Poppins", sans-serif;
+}
+
+body,
+html,
+.app {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    color: #222;
+}
+
+.app.dark {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f3f3f3;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 1s ease;
+}
+
+.app.dark .container {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.controls input {
+    padding: 12px 14px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    width: 60%;
+    text-align: center;
+    font-size: 1rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.controls input:focus {
+    border-color: #0078ff;
+    box-shadow: 0 0 8px rgba(0, 120, 255, 0.4);
+}
+
+.controls button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #0078ff, #005fcc);
+    color: #fff;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+.controls button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #005fcc, #0046a1);
+}
+
+.weather-card {
+    margin-top: 1.5rem;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 16px;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeUp 1s ease;
+}
+
+.app.dark .weather-card {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.city {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0.3rem 0;
+}
+
+.temp {
+    font-size: 2.8rem;
+    margin: 0.4rem 0;
+    font-weight: 700;
+}
+
+.desc {
+    font-size: 1.1rem;
+    margin: 0.3rem 0;
+    text-transform: capitalize;
+    opacity: 0.9;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.2rem;
+    font-size: 1rem;
+}
+
+.details p {
+    margin: 0;
+}
+
+.weather-icon {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 0.8rem;
+}
+
+.forecast {
+    margin-top: 2rem;
+}
+
+.forecast h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 12px;
+}
+
+.day-card {
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    padding: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.day-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.fade-in {
+    animation: fadeIn 1s ease;
+}
+
+.fade-up {
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem;
+    }
+    .controls input {
+        width: 100%;
+    }
+    .controls button {
+        width: 100%;
+    }
+    .details {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+.app.clear {
+    background: linear-gradient(135deg, #f9d423, #ff4e50);
+}
+
+.app.clouds {
+    background: linear-gradient(135deg, #d7d2cc, #304352);
+}
+
+.app.rain {
+    background: linear-gradient(135deg, #00c6fb, #005bea);
+}
+
+.app.thunderstorm {
+    background: linear-gradient(135deg, #283e51, #485563);
+}
+
+.app.mist,
+.app.haze,
+.app.fog {
+    background: linear-gradient(135deg, #757f9a, #d7dde8);
+}
+
+.app.snow {
+    background: linear-gradient(135deg, #83a4d4, #b6fbff);
+}
+
+.app.dust,
+.app.sand {
+    background: linear-gradient(135deg, #eacda3, #d6ae7b);
+}
+
+.app.dark.clear {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+.app.dark.clouds {
+    background: linear-gradient(135deg, #232526, #414345);
+}
+
+.app.dark.rain {
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+.app.dark.thunderstorm {
+    background: linear-gradient(135deg, #232526, #414345);
+}
+
+.app.dark.snow {
+    background: linear-gradient(135deg, #283048, #859398);
+}
