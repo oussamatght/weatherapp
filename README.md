@@ -1,9 +1,9 @@
-Global Weather App
+# Global Weather App
 
 A modern web application that displays weather information for any city around the world, with support for both Arabic and English languages, light and dark themes, and multi-day weather forecasts.
 Built using React.js, CSS, and the OpenWeather API.
 
-Features
+# Features
 
 Global Search – Search for the weather in any city worldwide.
 
@@ -19,7 +19,7 @@ Responsive Design – Works smoothly on both desktop and mobile devices.
 
 Saved City – Automatically saves the last searched city using LocalStorage.
 
-Tech Stack
+# Tech Stack
 
 React.js
 
