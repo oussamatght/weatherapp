@@ -10,7 +10,7 @@ export default function WeatherCard({ weather, unit }) {
       <p className="desc">{weather.weather[0].description}</p>
       <div className="details">
         <p>💧 {weather.main.humidity}%</p>
-        <p>🌬 {weather.wind.speed} m/s</p>
+        <p> {weather.wind.speed} m/s</p>
       </div>
     </div>
   );
