@@ -1,7 +1,7 @@
 # Global Weather App
 the host :[https://weatherapp-chi-sooty.vercel.app/]
 A modern web application that displays weather information for any city around the world, with support for both Arabic and English languages, light and dark themes, and multi-day weather forecasts.
-Built using React.js, CSS, and the OpenWeather API.
+Built using React.js, CSS, and the OpenWeather API
 
 # Features
 
