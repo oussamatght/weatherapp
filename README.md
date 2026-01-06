@@ -23,9 +23,7 @@ Saved City – Automatically saves the last searched city using LocalStorage.
 React.js
 
 CSS3 (modern design and animations)
-
 OpenWeather API
-
 LocalStorage
 
 Geolocation API
